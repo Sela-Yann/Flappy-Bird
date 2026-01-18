@@ -1,59 +1,64 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Page background */
-body {
-  height: 100vh;
-  background: linear-gradient(180deg, #87ceeb, #f0f9ff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Game container */
-.game-wrapper {
-  background: #ffffff;
-  padding: 16px;
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-}
-
-/* Canvas styling */
-canvas {
-  display: block;
-  background: linear-gradient(#87ceeb, #bdeaff);
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* Mobile hint */
-.hint {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Disable selection */
-canvas,
-.hint {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Small screens */
-@media (max-width: 480px) {
-  .game-wrapper {
-    padding: 10px;
-  }
-
-  .hint {
-    font-size: 12px;
-  }
-}
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        canvas {
+            border: 4px solid white;
+            border-radius: 10px;
+            background: #87CEEB;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            cursor: pointer;
+            display: block;
+        }
+        
+        .info {
+            color: white;
+            font-size: 1.1em;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            padding: 15px 25px;
+            border-radius: 10px;
+        }
+        
+        .info p {
+            margin: 5px 0;
+        }
+        
+        .score-label {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .controls {
+            color: white;
+            font-size: 1em;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
